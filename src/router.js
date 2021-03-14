@@ -8,26 +8,23 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     { path: '/', redirect: '/login' },
-    { path: '/login', component: Login},
-    { path: '/home', component: Home}
+    { path: '/login', component: Login },
+    { path: '/home', component: Home }
   ]
 })
 
 // 挂载路由导航守卫， to 表示将要访问的路径， from 表示从哪里来， next是下一步要做的操作
 router.beforeEach((to, from, next) => {
-  
-    if (to.path === '/login') {
-      return next();
-    }
-    // 获取token
-    const tokenStr = window.sessionStorage.getItem('token');
+  if (to.path === '/login') {
+    return next()
+  }
+  // 获取token
+  const tokenStr = window.sessionStorage.getItem('token')
 
-    if(!tokenStr) {
-      return next('login');
-    }
-    next();
-    
-  })
+  if (!tokenStr) {
+    return next('login')
+  }
+  next()
+})
 
 export default router
-
