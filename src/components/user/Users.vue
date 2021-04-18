@@ -495,7 +495,7 @@ export default {
     },
     setRoleDialogClosed () {
       // 关闭对话框时，重置下拉框内容
-      this.selectedRoleId = '',
+      this.selectedRoleId = ''
       this.userInfo = {}
     }
   }
