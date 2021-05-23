@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 import { Button, Form, FormItem, Input, Message, Table, TableColumn,
-  Switch, Tooltip, Pagination, Dialog, MessageBox, Tree, Select, Option, Cascader } from 'element-ui'
+  Switch, Tooltip, Pagination, Dialog, MessageBox, Tree, Select, Option, Cascader, Alert } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Form)
@@ -19,3 +19,4 @@ Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Cascader)
+Vue.use(Alert)
